@@ -1,0 +1,79 @@
+@import 'normalize';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English');
+
+// Variables
+@import 'variables';
+
+@import 'skelethor';
+/* @import 'gridot'; */
+
+@import 'layout';
+@import 'home';
+@import 'post';
+@import 'login';
+@import 'profile';
+
+// Basicos
+*
+{
+    box-sizing: border-box;
+}
+
+// Genericos
+.title{
+    font-family: $font-title;
+    width: 100%;
+}
+.nav-center{
+    text-align: center;
+    h4{
+        margin: 0px;
+        color: $color-grey;
+        opacity: 0.7;
+    }
+}
+.hidden{
+    display: none;
+}
+
+.btn-edit{
+    height: 40px;
+    width: 40px;
+    background-color: $color-danger;
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: .5s;
+    box-shadow: 0 0 0 $color-shadow;
+    i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        color: $color-white;
+    }
+}
+.btn-edit:hover{
+    background-color: $color-warning;
+    top: 11px;
+    box-shadow: 0 4px 0 $color-shadow;
+}
+
+.badge{
+    background-color: $color-grey;
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 0.8em;
+    color: $color-white;
+    display: inline-flex;
+}
+

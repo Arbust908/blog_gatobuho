@@ -1,0 +1,28 @@
+form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    label{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .remember{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+        input{
+            margin: 0px;
+            width: 20%;
+        }
+    }
+    .forgot{
+        margin: 10px 0px;
+        padding: 0px 20px;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-grey;
+    }
+}

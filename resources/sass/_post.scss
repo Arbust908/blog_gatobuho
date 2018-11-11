@@ -1,0 +1,98 @@
+main{
+    .post-index{
+        display: grid;
+        grid-template-rows: repeat(auto-fill, 300px);
+        justify-items: center;
+        align-items: center;
+        grid-gap: 12px;
+        padding: 14px 10px;
+    }
+    a{
+        text-decoration: none;
+        color: $color-black;
+    }
+    .card{
+        position: relative;
+        display: grid;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        box-shadow: 0 2px 0 $color-grey;
+        border-radius: 6px;
+        grid-template-rows: 100px auto 1fr 20px;
+        padding: 4px 0px;
+        .status{
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background-color: fade-out($color-main, .5);
+            border-radius: 4px 0px 0px 0px;
+            color: $color-white;
+        }
+        img{
+            height: 100px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 6px 6px 0px 0px;
+        }
+        h2,
+        p{
+            padding: 10px;
+            margin: 0px;
+        }
+    }
+    .post-show{
+        max-width: 100%;
+        display: grid;
+        grid-template-areas: 'hero hero hero' '... text ...';
+        grid-template-rows: 150px auto;
+        grid-template-columns: 20px 1fr 20px;
+        grid-gap: 10px;
+        position: relative;
+        .post-hero{
+            grid-area: hero;
+            display: flex;
+            padding: 20px;
+            padding-bottom: 0px;
+            align-items: flex-end;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0px 2px 4px $color-grey;
+            h2{
+                color: $color-white;
+                margin: 0px;
+            }
+        }
+        .post-text{
+            grid-area: text;
+            p{
+                margin: 0px;
+                word-break: break-all;
+            }
+            &:first-letter{
+                font-size: 2em;
+            }
+        }
+    }
+    .preview-post{
+        .post-index{
+            max-width: 80%;
+        }
+        div{
+            margin: 0 auto;
+            max-width: 90%;
+            box-shadow: 2px 2px 4px fade-out($color-black, .5);
+        }
+    }
+}
+@media screen and (min-width: $bp-tablet){
+    .post-index{
+        grid-template-columns: repeat(auto-fill, 310px);
+        justify-content: center;
+    }
+}

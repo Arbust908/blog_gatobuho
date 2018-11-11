@@ -1,0 +1,79 @@
+html, body {
+    background-color: $color-white;
+    font-family: $font-main;
+}
+.app{
+    display: grid;
+    grid-template-areas: 'nav' 'main' 'foot';
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    .logo{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            img{
+                width: inherit;
+                height: inherit;
+                object-fit: contain;
+            }
+        }
+    nav{
+        align-items: center;
+        background-color: $color-white;
+        border-top: 2px solid $color-main-dark;
+        box-shadow: 0px 2px 0px opacify($color: $color-grey, $amount: 0.5);
+        display: flex;
+        grid-area: nav;
+        justify-content: space-between;
+        padding: 0px 10px;
+        width: 100%;
+        z-index: 50;
+        .nav-left{
+            display: flex;
+            justify-content: flex-end;
+            a{
+                margin: 0px 10px;
+                p{
+                    margin: 0;
+                }
+            }
+        }
+        .nav-left,
+        .nav-right{
+            width: 30%;
+        }
+        .nav-center{
+            width: 40%;
+        }
+        .profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        align-items: center;
+        border-bottom: 2px solid $color-main-dark;
+        border-top: 1px solid $color-black;
+        display: flex;
+        grid-area: foot;
+        justify-content: space-between;
+        .redes{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                margin: 0px 10px;
+            }
+        }
+    }
+
+}
