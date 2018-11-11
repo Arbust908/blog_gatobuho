@@ -46,11 +46,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         //
     })->name('migrar');
     Route::get('/migrate/fresh', function () {
-        Artisan::call('migrate');
+        Artisan::call('migrate',[
+            '--seed' => true,
+        ]);
         //
     })->name('fresh');
     Route::get('/migrate/refresh', function () {
-        Artisan::call('migrate:refresh');
+        Artisan::call('migrate:refresh',[
+            '--seed' => true,
+        ]);
         //
     })->name('refresh');
     Route::get('/storage-link', function () {
